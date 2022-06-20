@@ -6,7 +6,7 @@
 /*   By: sbos <sbos@student.codam.nl>                 +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/06/20 14:28:24 by sbos          #+#    #+#                 */
-/*   Updated: 2022/06/20 16:41:16 by sbos          ########   odam.nl         */
+/*   Updated: 2022/06/20 16:46:20 by sbos          ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,8 +29,8 @@ Test(binary)
 	char *out = get_next_line(fd);
 	massert(out, "world\0hello\n");
 	massert(memcmp(out, "world\0hello\n", 13), 0);
-	massert_free(get_next_line(fd), "bye");
-	massert_free(get_next_line(fd), (char *)NULL);
+	massert_gnl(fd, "bye");
+	massert_gnl(fd, (char *)NULL);
 	free(out);
 
 	close(fd);

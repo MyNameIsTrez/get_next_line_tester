@@ -6,7 +6,7 @@
 /*   By: sbos <sbos@student.codam.nl>                 +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/06/20 14:28:24 by sbos          #+#    #+#                 */
-/*   Updated: 2022/06/20 16:40:58 by sbos          ########   odam.nl         */
+/*   Updated: 2022/06/20 16:46:20 by sbos          ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,8 +24,8 @@ Test(basic_no_newline)
 		assert(false);
 	}
 
-	massert_free(get_next_line(fd), "foobarbazbee");
-	massert_free(get_next_line(fd), (char *)NULL);
+	massert_gnl(fd, "foobarbazbee");
+	massert_gnl(fd, (char *)NULL);
 
 	close(fd);
 }

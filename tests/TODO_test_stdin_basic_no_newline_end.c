@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   test_stdin_basic_no_newline_end.c                  :+:    :+:            */
+/*   TODO_test_stdin_basic_no_newline_end.c             :+:    :+:            */
 /*                                                     +:+                    */
 /*   By: sbos <sbos@student.codam.nl>                 +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/06/20 14:28:24 by sbos          #+#    #+#                 */
-/*   Updated: 2022/06/20 16:41:10 by sbos          ########   odam.nl         */
+/*   Updated: 2022/06/20 16:46:20 by sbos          ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,9 +20,9 @@
 
 // Test(stdin_basic_no_newline_end)
 // {
-// 	massert_free(get_next_line(STDIN_FILENO), "foobar");
-// 	massert_free(get_next_line(STDIN_FILENO), "bazbee");
-// 	massert_free(get_next_line(STDIN_FILENO), (char *)NULL);
+// 	massert_gnl(get_next_line(STDIN_FILENO), "foobar");
+// 	massert_gnl(get_next_line(STDIN_FILENO), "bazbee");
+// 	massert_gnl(get_next_line(STDIN_FILENO), (char *)NULL);
 // }
 
 ////////////////////////////////////////////////////////////////////////////////

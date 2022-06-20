@@ -6,7 +6,7 @@
 /*   By: sbos <sbos@student.codam.nl>                 +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/06/20 14:27:51 by sbos          #+#    #+#                 */
-/*   Updated: 2022/06/20 16:39:37 by sbos          ########   odam.nl         */
+/*   Updated: 2022/06/20 16:46:20 by sbos          ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,8 +29,8 @@
 
 ////////////////////////////////////////////////////////////////////////////////
 
-# define massert_free(str1, str2) {\
-	char	*s1 = str1;\
+# define massert_gnl(fd, str2) {\
+	char	*s1 = get_next_line(fd);\
 	massert(s1, (char *)str2);\
 	free(s1);\
 }
