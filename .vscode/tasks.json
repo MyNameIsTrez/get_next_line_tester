@@ -1,0 +1,28 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		// {
+		// 	"label": "Build Tester",
+		// 	"type": "shell",
+		// 	"command": "make",
+		// 	"args": [/*"ADD_BONUS=1",*/ "CUSTOM_MAIN=1", "re"],
+		// 	"problemMatcher": [
+		// 		"$gcc"
+		// 	],
+		// 	"presentation": {
+		// 		"reveal": "silent"
+		// 	},
+		// 	"group": "build"
+		// }
+		{
+			"label": "Build Tester",
+			"type": "shell",
+			"command": "~/Documents/Programming/libctester/run_ctester.sh",
+			"args": [ "no run" ],
+			"problemMatcher": [
+				"$gcc"
+			],
+			"group": "build"
+		}
+	]
+}
