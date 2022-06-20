@@ -1,42 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   get_next_line_tests.h                              :+:    :+:            */
+/*   test_two_newlines.c                                :+:    :+:            */
 /*                                                     +:+                    */
 /*   By: sbos <sbos@student.codam.nl>                 +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2022/06/20 14:27:51 by sbos          #+#    #+#                 */
-/*   Updated: 2022/06/20 16:39:37 by sbos          ########   odam.nl         */
+/*   Created: 2022/06/20 14:28:24 by sbos          #+#    #+#                 */
+/*   Updated: 2022/06/20 16:43:27 by sbos          ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 ////////////////////////////////////////////////////////////////////////////////
 
-#ifndef GET_NEXT_LINE_TESTS_H
-# define GET_NEXT_LINE_TESTS_H
+#include "get_next_line_tests.h"
 
 ////////////////////////////////////////////////////////////////////////////////
 
-# include "get_next_line.h"
+Test(two_newlines)
+{
+	int fd = open("test_files/two_newlines", O_RDONLY);
+	if (fd == -1)
+	{
+		assert(false);
+	}
 
-# include <assert.h>
+	massert_free(get_next_line(fd), "\n");
+	massert_free(get_next_line(fd), "\n");
+	massert_free(get_next_line(fd), (char *)NULL);
 
-# include "ctester.h"
-
-////////////////////////////////////////////////////////////////////////////////
-
-# include <fcntl.h>
-
-////////////////////////////////////////////////////////////////////////////////
-
-# define massert_free(str1, str2) {\
-	char	*s1 = str1;\
-	massert(s1, (char *)str2);\
-	free(s1);\
+	close(fd);
 }
-
-////////////////////////////////////////////////////////////////////////////////
-
-#endif
 
 ////////////////////////////////////////////////////////////////////////////////
