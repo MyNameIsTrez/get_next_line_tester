@@ -30,7 +30,7 @@
 !*.normignore
 
 # # Allow the Makefile
-# !Makefile
+!Makefile
 
 # # Allow Criterion files
 # !crit_utils.h
